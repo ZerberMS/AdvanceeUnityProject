@@ -1,7 +1,6 @@
 using PlayFab;
 using PlayFab.ClientModels;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,7 +34,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         LoggedIn = false;
@@ -60,21 +58,17 @@ public class GameManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(userID) && !string.IsNullOrEmpty(userPass))
         {
-
             var request = new RegisterPlayFabUserRequest
             {
                 Username = userID,
                 Password = userPass,
                 RequireBothUsernameAndEmail = false,
                 TitleId = PlayFabSettings.staticSettings.TitleId
-
             };
 
             PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
         }
     }
-
-
 
     public void Login()
     {
@@ -86,7 +80,6 @@ public class GameManager : MonoBehaviour
                 {
                     Username = userID,
                     Password = userPass
-
                 };
 
                 PlayFabClientAPI.LoginWithPlayFab(request, OnLoginSuccess, OnError);
@@ -97,11 +90,9 @@ public class GameManager : MonoBehaviour
                 {
                     Email = userEmail,
                     Password = userPass
-
                 };
 
                 PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
-
             }
         }
     }
@@ -120,8 +111,6 @@ public class GameManager : MonoBehaviour
         var request = new UpdateUserDataRequest
         {
             Data = Data
-            
-
         };
 
         PlayFabClientAPI.UpdateUserData(request, OnSendSucceed, OnError);
@@ -130,7 +119,6 @@ public class GameManager : MonoBehaviour
     public void GetCardData()
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataRecieved, OnError);
-
     }
 
     private void OnDataRecieved(GetUserDataResult obj)
@@ -177,7 +165,6 @@ public class GameManager : MonoBehaviour
             LocalCards.RemoveAt(i);
             Hand.Add(c);
         }
-
     }
 
     private void ResetCards()
