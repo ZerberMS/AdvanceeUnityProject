@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdd8ee4880c18849984c47e860d4a20, type: 3}
+  m_Name: Lion's Eye Diamond
+  m_EditorClassIdentifier: 
+  Number: 3
+  Image: {fileID: 21300000, guid: 9ccaf655e167e8c4182b95b8d476a1ee, type: 3}
+  Description: 'T, sacrifice Lion''s Eye Diamond, Discard your hand: Add 3 mana of
+    any color to your mana pool.'
